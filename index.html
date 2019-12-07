@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HotelTV</title>
+    <link rel="stylesheet" type="text/css" href="css/vis.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/login.css"/>
+    <script src="$WEBAPIS/webapis/webapis.js"></script>
+    <script src="js/vis.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/utils.js"></script>   
+    <script src="js/controls.js"></script>
+    <script src="js/server.js"></script>
+    <script src="js/queue.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/player.js"></script> 
+    <script src="js/display.js"></script>
+    <script src="js/marquee.min.js"></script>
+    <script src="js/epg.js"></script>
+</head>
+<body>
+
+<div id="loginDiv">       
+	<form id="login_form">
+		<label for="login">Username:</label>
+		<input type="text" name="login" id="login" autofocus>
+		<label for="password">Password:</label>
+		<input type="password" name="password" id="password">
+		<div id="lower">
+			<input type="submit" value="Login">
+		</div>
+	</form>
+</div> 
+<div class="section" id="main">
+ 	<div id='Sidenav' class='sidenav hide'>
+		<ul id='channel-list'></ul>
+	</div>
+	<div class='screen'>
+		<div id="header" class="header">
+			<div id="header-logo" class="headl"></div>
+			<div id="header-ch" class="headch"></div>
+			<div id="header-title" class="headt"></div>
+		    <div id="header-clock" class="headcl">
+		    	<span id="clock" class="clock"></span>
+		    </div>
+		</div>
+		<div id='nr'></div>
+		<div id="chlist" class="chlist hide">
+			<div class="menu-list-left">
+				<ul id='ch-list'></ul>
+			</div>
+			<div class="menu-list-right">
+				<div id="menu-logo"></div>
+				<div id="menu-ch"></div>
+				<div id="menu-title"></div>
+				<div id="menu-date"></div>
+				<div id="menu-description"></div>
+				<div id="menu-next"></div>
+			</div>
+			<div class="menu-list-bottom hide"></div>
+		</div>
+		<div id="epg">
+			<div id="visualization" class="visualization"></div>
+		</div>
+		<div id="footer" class="footer">
+			<div id="footer-min" class="footermin">
+				<div id="footer-start" class="footerst"></div>
+				<div id="footer-progress" class="footerpr">
+					<progress id="progress" class="progress" max="100" value="70"></progress>
+				</div>
+				<div id="footer-end" class="footeren"></div>		
+			</div>
+			<div id="footer-range" class="footerdate"></div>
+			<div id="footer-title" class="footertitle"></div> 
+			<div id="footer-description" class="footerdesc"></div>
+		</div>
+		<object id='av-player' type='application/avplayer'></object>
+	</div>	
+</div>	
+
+</body>
+</html>
